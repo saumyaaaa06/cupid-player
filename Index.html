@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>dreamwave player</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="player">
+
+    <!-- background ui -->
+
+    <img
+      src="images/player1bg.png"
+      class="bg"
+      id="bg"
+    />
+
+
+
+    <!-- vinyl -->
+
+    <img
+      src="images/vinyl1.png"
+      class="vinyl"
+      id="vinyl"
+    />
+
+
+
+    <!-- song info -->
+
+    <div class="song-info">
+
+      <p class="now-playing">
+        now playing
+      </p>
+
+      <h1 id="title">
+        HER
+      </h1>
+
+      <p id="artist">
+        by clairo
+      </p>
+
+    </div>
+
+
+
+    <!-- invisible controls -->
+
+    <button class="play-btn" id="playBtn"></button>
+
+    <button class="next-btn" id="nextBtn"></button>
+
+    <button class="prev-btn" id="prevBtn"></button>
+
+
+
+    <!-- progress bar -->
+
+    <div class="progress-container" id="progressContainer">
+
+      <div class="progress" id="progress"></div>
+
+    </div>
+
+
+
+    <!-- time -->
+
+    <div class="time">
+
+      <span id="current">
+        0:00
+      </span>
+
+      <span id="duration">
+        0:00
+      </span>
+
+    </div>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
