@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#ececec;
+}
+
+.player{
+    position:relative;
+
+    width:500px;
+    height:740px;
+
+    border-radius:24px;
+    overflow:hidden;
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+
+/* background */
+
+.bg{
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    top:0;
+    left:0;
+
+    object-fit:cover;
+
+    z-index:1;
+}
+
+
+
+/* vinyl */
+
+.vinyl{
+    position:absolute;
+
+    width:250px;
+
+    top:175px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+}
+
+
+
+/* spinning animation */
+
+.spin{
+    animation:rotate 4s linear infinite;
+}
+
+@keyframes rotate{
+
+    from{
+        transform:
+        translateX(-50%)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translateX(-50%)
+        rotate(360deg);
+    }
+}
+
+
+
+/* song info */
+
+.song-info{
+    position:absolute;
+
+    left:70px;
+    bottom:235px;
+
+    z-index:10;
+
+    color:#d57d8c;
+}
+
+.now-playing{
+    font-size:14px;
+    margin-bottom:6px;
+
+    opacity:.7;
+}
+
+.song-info h1{
+    font-size:34px;
+    margin-bottom:6px;
+}
+
+.song-info p{
+    font-size:18px;
+}
+
+
+
+/* invisible buttons */
+
+.play-btn,
+.next-btn,
+.prev-btn{
+    position:absolute;
+
+    background:transparent;
+    border:none;
+
+    cursor:pointer;
+
+    z-index:20;
+}
+
+
+
+/* play button */
+
+.play-btn{
+    width:90px;
+    height:90px;
+
+    left:50%;
+    bottom:110px;
+
+    transform:translateX(-50%);
+}
+
+
+
+/* next button */
+
+.next-btn{
+    width:70px;
+    height:70px;
+
+    right:110px;
+    bottom:120px;
+}
+
+
+
+/* prev button */
+
+.prev-btn{
+    width:70px;
+    height:70px;
+
+    left:110px;
+    bottom:120px;
+}
+
+
+
+/* progress bar */
+
+.progress-container{
+    position:absolute;
+
+    width:320px;
+    height:8px;
+
+    left:50%;
+    bottom:70px;
+
+    transform:translateX(-50%);
+
+    background:rgba(255,255,255,0.35);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    z-index:15;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+
+    background:#d57d8c;
+}
+
+
+
+/* time */
+
+.time{
+    position:absolute;
+
+    width:320px;
+
+    left:50%;
+    bottom:45px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    justify-content:space-between;
+
+    font-size:13px;
+
+    color:#d57d8c;
+
+    z-index:15;
+}
